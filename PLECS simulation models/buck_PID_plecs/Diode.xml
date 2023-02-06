@@ -1,0 +1,49 @@
+<?xml version="﻿1.0" encoding="UTF-8"?>
+<SemiconductorLibrary xmlns="http://www.plexim.com/xml/semiconductors/" version="1.0">
+    <Package class="Diode" vendor="Example" partnumber="Example Diode">
+        <SemiconductorData type="Diode">
+            <TurnOnLoss>
+                <CurrentAxis> 0</CurrentAxis>
+                <VoltageAxis> 0</VoltageAxis>
+                <TemperatureAxis> 25</TemperatureAxis>
+                <Energy scale="1">
+                    <Temperature>
+                        <Voltage> 0</Voltage>
+                    </Temperature>
+                </Energy>
+            </TurnOnLoss>
+            <TurnOffLoss>
+                <CurrentAxis> 0 5 8 10 15</CurrentAxis>
+                <VoltageAxis> -600 -500 0</VoltageAxis>
+                <TemperatureAxis> 25 125</TemperatureAxis>
+                <Energy scale="0.001">
+                    <Temperature>
+                        <Voltage> 0 0.18 0.21 0.26 0.27</Voltage>
+                        <Voltage> 0 0.14 0.17 0.2 0.21</Voltage>
+                        <Voltage> 0 0 0 0 0</Voltage>
+                    </Temperature>
+                    <Temperature>
+                        <Voltage> 0 0.4 0.53 0.66 0.78</Voltage>
+                        <Voltage> 0 0.34 0.44 0.55 0.62</Voltage>
+                        <Voltage> 0 0 0 0 0</Voltage>
+                    </Temperature>
+                </Energy>
+            </TurnOffLoss>
+            <ConductionLoss>
+                <CurrentAxis> 0 0.1 0.4 0.8 1.2 1.6 2 2.8 4 4.8 6 8 10 12 14 16 18 20</CurrentAxis>
+                <TemperatureAxis> 24.7 82.6 118.8</TemperatureAxis>
+                <VoltageDrop scale="1">
+                    <Temperature> 0 0.6 0.9 1.14 1.27 1.37 1.44 1.57 1.73 1.81 1.93 2.08 2.21 2.34 2.45 2.55 2.65 2.75</Temperature>
+                    <Temperature> 0 0.44 0.67 0.8 0.9 1 1.07 1.17 1.31 1.37 1.49 1.64 1.78 1.89 2.03 2.11 2.23 2.32</Temperature>
+                    <Temperature> 0 0.38 0.54 0.67 0.74 0.82 0.87 0.97 1.11 1.17 1.27 1.42 1.57 1.69 1.79 1.91 2.01 2.11</Temperature>
+                </VoltageDrop>
+            </ConductionLoss>
+        </SemiconductorData>
+        <ThermalModel>
+            <Branch type="Cauer"></Branch>
+        </ThermalModel>
+        <Comment>
+            <Line></Line>
+        </Comment>
+    </Package>
+</SemiconductorLibrary>

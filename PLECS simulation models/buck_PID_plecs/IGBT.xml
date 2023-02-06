@@ -1,0 +1,58 @@
+<?xml version="﻿1.0" encoding="UTF-8"?>
+<SemiconductorLibrary xmlns="http://www.plexim.com/xml/semiconductors/" version="1.0">
+    <Package class="IGBT" vendor="Example" partnumber="Example IGBT">
+        <SemiconductorData type="IGBT">
+            <TurnOnLoss>
+                <CurrentAxis> 0 5 8 10 15</CurrentAxis>
+                <VoltageAxis> 0 500 600</VoltageAxis>
+                <TemperatureAxis> 25 125</TemperatureAxis>
+                <Energy scale="0.001">
+                    <Temperature>
+                        <Voltage> 0 0 0 0 0</Voltage>
+                        <Voltage> 0 0.28 0.45 0.56 0.96</Voltage>
+                        <Voltage> 0 0.36 0.55 0.71 1.08</Voltage>
+                    </Temperature>
+                    <Temperature>
+                        <Voltage> 0 0 0 0 0</Voltage>
+                        <Voltage> 0 0.73 0.94 1.17 1.77</Voltage>
+                        <Voltage> 0 0.83 1.03 1.34 1.78</Voltage>
+                    </Temperature>
+                </Energy>
+            </TurnOnLoss>
+            <TurnOffLoss>
+                <CurrentAxis> 0 5 8 10 15</CurrentAxis>
+                <VoltageAxis> 0 500 600</VoltageAxis>
+                <TemperatureAxis> 25 125</TemperatureAxis>
+                <Energy scale="0.001">
+                    <Temperature>
+                        <Voltage> 0 0 0 0 0</Voltage>
+                        <Voltage> 0 0.6 0.93 1.08 1.36</Voltage>
+                        <Voltage> 0 0.79 1.09 1.27 1.63</Voltage>
+                    </Temperature>
+                    <Temperature>
+                        <Voltage> 0 0 0 0 0</Voltage>
+                        <Voltage> 0 0.62 1 1.15 1.43</Voltage>
+                        <Voltage> 0 0.8 1.25 1.37 1.82</Voltage>
+                    </Temperature>
+                </Energy>
+            </TurnOffLoss>
+            <ConductionLoss>
+                <CurrentAxis> 0 0.01 0.4 0.8 1.2 2 2.8 4 4.8 6 8 10 12 14 16 18</CurrentAxis>
+                <TemperatureAxis> 22 82 100 110 150</TemperatureAxis>
+                <VoltageDrop scale="1">
+                    <Temperature> 0 0.55 0.74 0.84 0.91 1.02 1.11 1.21 1.27 1.34 1.48 1.6 1.69 1.78 1.88 1.95</Temperature>
+                    <Temperature> 0 0.4 0.6 0.79 0.9 1.06 1.16 1.31 1.39 1.5 1.67 1.81 1.95 2.08 2.18 2.28</Temperature>
+                    <Temperature> 0 0.4 0.6 0.79 0.9 1.06 1.18 1.34 1.43 1.54 1.73 1.89 2.03 2.16 2.28 2.4</Temperature>
+                    <Temperature> 0 0.4 0.6 0.79 0.9 1.06 1.18 1.36 1.44 1.58 1.76 1.92 2.06 2.18 2.32 2.45</Temperature>
+                    <Temperature> 0 0.4 0.6 0.79 0.9 1.1 1.23 1.39 1.54 1.65 1.88 2.1 2.26 2.42 2.59 2.75</Temperature>
+                </VoltageDrop>
+            </ConductionLoss>
+        </SemiconductorData>
+        <ThermalModel>
+            <Branch type="Cauer"></Branch>
+        </ThermalModel>
+        <Comment>
+            <Line></Line>
+        </Comment>
+    </Package>
+</SemiconductorLibrary>
