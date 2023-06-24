@@ -2,20 +2,20 @@ Circuit: * C:\Users\artur\Desktop\60W-20V-Buck-Converter-in-CCM\Ltspice simulati
 
 Direct Newton iteration for .op point succeeded.
 
-Date: Sun Jan 08 16:49:37 2023
-Total elapsed time: 4.248 seconds.
+Date: Mon Jun 05 15:59:13 2023
+Total elapsed time: 13.987 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 3001395
-traniter = 3001389
-tranpoints = 941372
-accept = 775229
-rejected = 166143
-matrix size = 11
-fillins = 3
+totiter = 10481879
+traniter = 10481873
+tranpoints = 3302806
+accept = 2666941
+rejected = 635865
+matrix size = 12
+fillins = 13
 solver = Normal
-Matrix Compiler1: 718 bytes object code size  0.2/0.1/[0.1]
-Matrix Compiler2: 883 bytes object code size  0.1/0.2/[0.1]
+Matrix Compiler1: 1.20 KB object code size  0.2/0.1/[0.1]
+Matrix Compiler2: 1.10 KB object code size  0.1/0.2/[0.1]
 
