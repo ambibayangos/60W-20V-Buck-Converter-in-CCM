@@ -47,9 +47,9 @@ Plecs {
   ScriptsDialogGeometry "[-1738 1576 623 267]"
   ScriptsDialogSplitterPos "107"
   Schematic {
-    Location      [-1920, 643; 0, 1614]
+    Location      [0, 26; 1707, 984]
     ZoomFactor    1
-    SliderPosition [4, 0]
+    SliderPosition [-1, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -593,7 +593,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "DialogGeometry"
-        Value         "[-1760 1546 885 509]"
+        Value         "[949 481 1388 791]"
         Show          off
       }
       Parameter {
@@ -663,12 +663,12 @@ Plecs {
 "#define IFB_OUTPUT OutputSignal(0,2)\n"
 "\n"
 "//#define Vset and Iset\n"
-"#define VSET 5\n"
+"#define VSET 1.2\n"
 "#define ISET 1\n"
 "\n"
 "//Voltage PI gains\n"
-"#define P_GAIN_VOLTAGELOOP 0.0000001\n"
-"#define I_GAIN_VOLTAGELOOP 0.0000001\n"
+"#define P_GAIN_VOLTAGELOOP 0.00000001\n"
+"#define I_GAIN_VOLTAGELOOP 0.00000001\n"
 "\n"
 "\n"
 "float error = 0;\n"
@@ -684,20 +684,24 @@ Plecs {
       }
       Parameter {
         Variable      "OutputFcn"
-        Value         "error = VSET - VFB_INPUT; // compute error term\n"
+        Value         "// compute error term\n"
+"error = VSET - VFB_INPUT;\n"
+"// compute integral term\n"
 "integral_value_voltage_loop = I_GAIN_VOLTAGELOOP*error + prev_integral_value_"
 "voltage_loop;\n"
-"prev_integral_value_voltage_loop = integral_value_voltage_loop; // store the "
-"prev integral term\n"
-"iref = P_GAIN_VOLTAGELOOP*error + integral_value_voltage_loop; // compute the"
-" Iref value\n"
+"// store the integral term\n"
+"prev_integral_value_voltage_loop = integral_value_voltage_loop;\n"
+"// compute the Iref value\n"
+"iref = P_GAIN_VOLTAGELOOP*error + integral_value_voltage_loop; \n"
 "\n"
+"// saturate the iref value\n"
 "if(iref >= ISET){\n"
 "iref = ISET;\n"
 "}else if(iref <= 0){\n"
 "iref = 0;\n"
 "}\n"
 "\n"
+"// modulate the PWM\n"
 "if(IFB_INPUT >= iref){\n"
 "RESET_SIGNAL_OUTPUT = 1;\n"
 "}else{\n"
@@ -846,19 +850,20 @@ Plecs {
       Direction     down
       Flipped       on
       LabelPosition south
-      Location      [0, 26; 1707, 1002]
+      Location      [-1920, 643; 0, 1632]
       State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
 "G0AQQByAGUAYQAAAAAA/////wAAAZYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAJcA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAACXAP///wAAAAMAAAoBAAABbfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAACgEAAABxAP///wAACgEAAAQiAAAA"
+"///wAAAJcA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAACXAP///wAAAAMAAAtAAAABAvw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAAC0AAAABxAP///wAAC0AAAAShAAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAALeAMAAAAGAAAAC"
-"AAAAJYAAAAJAAAAlgAAAAMAAACWAAAABgAAAJYAAAAEAAAAlgAAAAUAAACWAAAJ5wAAAAsBAAABAA"
-"AAAAAAAAAAAAAAlv////8AAACBAAAAAAAAAAsAAAD2AAAAAQAAAAAAAACWAAAAAQAAAAAAAACWAAA"
-"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAACW"
-"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAcvAAAAAQAAAAAAAAPoAAAAADU="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
+"QAAAJYAAAAIAAAAlgAAAAUAAACWAAAABAAAAJYAAAAHAAAAlgAAAAYAAACWAAAAAQAAAJYAAAADAA"
+"AAlgAAAAIAAACWAAALJgAAAAsBAAABAAAAAAAAAAAAAAAAlv////8AAACBAAAAAAAAAAsAAAD2AAA"
+"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
+"AowAAAAAQAAAAAAAAPoAAAAADU="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -868,7 +873,7 @@ Plecs {
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
-      Open          "0"
+      Open          "1"
       Ts            "-1"
       SampleLimit   "0"
       XAxisLabel    "Time / s"
@@ -1724,4 +1729,4 @@ Plecs {
     ShowCycles    "10"
   }
 }
-DemoSignature "SI562uPwseKAYXaldd3yLVWCj3asIdAMJfibA4BAiys="
+DemoSignature "cGaOsYrrX46oPJDMuyF5qrP1/XVmTzsRdG6LAvqDeyk="
