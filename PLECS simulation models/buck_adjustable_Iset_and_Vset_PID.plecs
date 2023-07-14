@@ -1,5 +1,5 @@
 Plecs {
-  Name          "buck_adjustable_Vset_PID"
+  Name          "buck_adjustable_Iset_and_Vset_PID"
   Version       "4.7"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
@@ -49,14 +49,14 @@ Plecs {
   Schematic {
     Location      [-1920, 643; 0, 1614]
     ZoomFactor    1
-    SliderPosition [4, 0]
+    SliderPosition [136, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
       Type          Diode
       Name          "D1"
       Show          off
-      Position      [275, 185]
+      Position      [390, 190]
       Direction     up
       Flipped       on
       LabelPosition west
@@ -90,7 +90,7 @@ Plecs {
       Type          Inductor
       Name          "L1"
       Show          off
-      Position      [340, 150]
+      Position      [455, 155]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -109,7 +109,7 @@ Plecs {
       Type          Capacitor
       Name          "C1"
       Show          off
-      Position      [400, 195]
+      Position      [515, 200]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -128,7 +128,7 @@ Plecs {
       Type          Mosfet
       Name          "FET1"
       Show          on
-      Position      [235, 150]
+      Position      [350, 155]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -163,14 +163,14 @@ Plecs {
       SrcComponent  "Components/Control/Modulators/Peak Current\\nController"
       Name          "Peak Current\nController"
       Show          on
-      Position      [275, 545]
+      Position      [390, 550]
       Direction     down
       Flipped       on
       LabelPosition south
       Frame         [-20, -20; 20, 20]
       Parameter {
         Variable      "fs"
-        Value         "100e3"
+        Value         "70e3"
         Show          off
       }
       Parameter {
@@ -185,7 +185,7 @@ Plecs {
       }
       Parameter {
         Variable      "Islope"
-        Value         "0.1"
+        Value         "0.5"
         Show          off
       }
       Terminal {
@@ -208,13 +208,13 @@ Plecs {
       Type          Saturation
       Name          "Saturation"
       Show          on
-      Position      [370, 610]
+      Position      [485, 615]
       Direction     right
       Flipped       on
       LabelPosition south
       Parameter {
         Variable      "UpperLimit"
-        Value         "1"
+        Value         "1.25"
         Show          off
       }
       Parameter {
@@ -227,7 +227,7 @@ Plecs {
       Type          Sum
       Name          "Sum"
       Show          off
-      Position      [605, 610]
+      Position      [720, 615]
       Direction     down
       Flipped       on
       LabelPosition south
@@ -251,7 +251,7 @@ Plecs {
       Type          Constant
       Name          "Constant1"
       Show          on
-      Position      [655, 610]
+      Position      [770, 615]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -271,7 +271,7 @@ Plecs {
       Type          Ground
       Name          "Ground"
       Show          off
-      Position      [485, 235]
+      Position      [600, 240]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -288,7 +288,7 @@ Plecs {
       Frame         [-15, -15; 15, 15]
       Parameter {
         Variable      "slope"
-        Value         "1/10e-3"
+        Value         "1/20e-3"
         Show          on
       }
       Parameter {
@@ -335,7 +335,7 @@ Plecs {
       Type          Integrator
       Name          "Integrator"
       Show          on
-      Position      [525, 660]
+      Position      [640, 665]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -379,13 +379,13 @@ Plecs {
       Type          Gain
       Name          "Gain"
       Show          on
-      Position      [470, 660]
+      Position      [585, 665]
       Direction     right
       Flipped       on
       LabelPosition south
       Parameter {
         Variable      "K"
-        Value         "200"
+        Value         "1000"
         Show          off
       }
       Parameter {
@@ -403,7 +403,7 @@ Plecs {
       Type          Sum
       Name          "Sum1"
       Show          off
-      Position      [425, 610]
+      Position      [540, 615]
       Direction     down
       Flipped       on
       LabelPosition south
@@ -427,13 +427,13 @@ Plecs {
       Type          Gain
       Name          "Gain1"
       Show          on
-      Position      [470, 610]
+      Position      [585, 615]
       Direction     right
       Flipped       on
       LabelPosition south
       Parameter {
         Variable      "K"
-        Value         "10"
+        Value         "1000"
         Show          off
       }
       Parameter {
@@ -451,13 +451,13 @@ Plecs {
       Type          Resistor
       Name          "Rload"
       Show          on
-      Position      [485, 185]
+      Position      [600, 190]
       Direction     up
       Flipped       off
       LabelPosition east
       Parameter {
         Variable      "R"
-        Value         "5"
+        Value         "12/1"
         Show          on
       }
     }
@@ -465,29 +465,28 @@ Plecs {
       Type          Scope
       Name          "Scope1"
       Show          on
-      Position      [1650, 130]
+      Position      [1780, 140]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [0, 26; 1707, 1002]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAAAAAAAAPwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAZYA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAJcA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAACXAP///wAAAAMAAAoBAAABQfw"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQBAAAAAAAACgEAAABxAP///wAACgEAAAROAAAA"
-"BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
-"AAAAA=="
+      Location      [-1920, 672; 0, 1662]
+      State         "AAAA/wAAAAD9AAAAAQAAAAEAAAXeAAAFqvwCAAAABPsAAAAUAEQAYQB0A"
+"GEAVwBpAGQAZwBlAHQBAAAAQQAABaoAAACIAP////sAAAAQAFoAbwBvAG0AQQByAGUAYQAAAAAA//"
+"///wAAAc0A////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA/////wAAAJcA////+wAAAAw"
+"AVAByAGEAYwBlAHMAAAAAAP////8AAACXAP///wAABVwAAAWqAAAABAAAAAQAAAAIAAAACPwAAAAB"
+"AAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAALeAMAAAAGAAAAC"
-"QAAAJYAAAAIAAAAlgAAAAMAAACWAAAABgAAAJYAAAAFAAAAlgAAAAQAAACWAAAJ5wAAAAsBAAABAA"
-"AAAAAAAAAAAAAAlv////8AAACBAAAAAAAAAAsAAAD6AAAAAQAAAAAAAACWAAAAAQAAAAAAAACWAAA"
-"AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAACW"
-"AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAcrAAAAAQAAAAAAAAPoAAAAADU="
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAALUAIAAAADAAAAB"
+"gAAAJYAAAAEAAAAlgAAAAkAAACWAAAF3gAAAAsBAAABAAAAAAAAAAAAAAAAlv////8AAACBAAAAAA"
+"AAAAsAAAD6AAAAAQAAAAAAAACWAAAAAQAAAAAAAACWAAAAAQAAAAAAAACWAAAAAQAAAAAAAAAAAAA"
+"AAQAAAAAAAACWAAAAAQAAAAAAAAAAAAAAAQAAAAAAAACWAAAAAQAAAAAAAACWAAAAAQAAAAAAAAAA"
+"AAAAAQAAAAAAAAFgAAAAAQAAAAAAAAPoAAAAADU="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAA"
 "AAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAA"
-"AAAAAAAAAAAAAAAA"
-      Axes          "7"
+"AAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+      Axes          "8"
       TimeRange     "0.0"
       ScrollingMode "1"
       SingleTimeAxis "1"
@@ -563,7 +562,18 @@ Plecs {
         BaselineValue 0
       }
       Axis {
-        Name          ""
+        Name          "Gate"
+        AutoScale     1
+        MinValue      0
+        MaxValue      1
+        Signals       {}
+        SignalTypes   [ ]
+        Untangle      0
+        KeepBaseline  off
+        BaselineValue 0
+      }
+      Axis {
+        Name          "Cin current"
         AutoScale     1
         MinValue      0
         MaxValue      1
@@ -649,13 +659,23 @@ Plecs {
           KeepBaseline  off
           BaselineValue 0
         }
+        Axis {
+          Name          ""
+          AutoScale     1
+          MinValue      0
+          MaxValue      1
+          Signals       {}
+          Untangle      0
+          KeepBaseline  off
+          BaselineValue 0
+        }
       }
     }
     Component {
       Type          PlecsProbe
       Name          "Inductor current"
       Show          on
-      Position      [1465, 145]
+      Position      [1580, 150]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -669,7 +689,7 @@ Plecs {
       Type          PlecsProbe
       Name          "Diode current"
       Show          on
-      Position      [1465, 230]
+      Position      [1580, 235]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -683,7 +703,7 @@ Plecs {
       Type          PlecsProbe
       Name          "Switch current"
       Show          on
-      Position      [1465, 185]
+      Position      [1580, 190]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -697,7 +717,7 @@ Plecs {
       Type          PlecsProbe
       Name          "Cout current"
       Show          on
-      Position      [1465, 275]
+      Position      [1580, 280]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -711,7 +731,7 @@ Plecs {
       Type          PlecsProbe
       Name          "Vout"
       Show          on
-      Position      [1465, 100]
+      Position      [1580, 105]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -725,7 +745,7 @@ Plecs {
       Type          Resistor
       Name          "R1"
       Show          on
-      Position      [600, 180]
+      Position      [715, 185]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -739,7 +759,7 @@ Plecs {
       Type          Resistor
       Name          "R2"
       Show          on
-      Position      [600, 255]
+      Position      [715, 260]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -753,7 +773,7 @@ Plecs {
       Type          Ground
       Name          "Ground1"
       Show          off
-      Position      [600, 330]
+      Position      [715, 335]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -763,7 +783,7 @@ Plecs {
       SrcComponent  "Components/Electrical/Electronics/Op-Amp"
       Name          "Op-Amp"
       Show          on
-      Position      [965, 230]
+      Position      [1080, 235]
       Direction     up
       Flipped       off
       LabelPosition north
@@ -798,7 +818,7 @@ Plecs {
       Type          Ground
       Name          "Ground2"
       Show          off
-      Position      [965, 280]
+      Position      [1080, 285]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -807,7 +827,7 @@ Plecs {
       Type          Resistor
       Name          "R3"
       Show          on
-      Position      [970, 310]
+      Position      [1085, 315]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -821,7 +841,7 @@ Plecs {
       Type          Resistor
       Name          "R4"
       Show          on
-      Position      [850, 310]
+      Position      [965, 315]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -835,7 +855,7 @@ Plecs {
       Type          Resistor
       Name          "R5"
       Show          on
-      Position      [860, 220]
+      Position      [975, 225]
       Direction     right
       Flipped       off
       LabelPosition south
@@ -849,7 +869,7 @@ Plecs {
       Type          Resistor
       Name          "R6"
       Show          on
-      Position      [905, 155]
+      Position      [1020, 160]
       Direction     down
       Flipped       on
       LabelPosition west
@@ -863,7 +883,7 @@ Plecs {
       Type          Ground
       Name          "Ground3"
       Show          off
-      Position      [1035, 165]
+      Position      [1150, 170]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -872,7 +892,7 @@ Plecs {
       Type          Voltmeter
       Name          "Vm1"
       Show          on
-      Position      [1095, 270]
+      Position      [1210, 275]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -881,7 +901,7 @@ Plecs {
       Type          Ground
       Name          "Ground4"
       Show          off
-      Position      [1095, 310]
+      Position      [1210, 315]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -890,14 +910,14 @@ Plecs {
       Type          Constant
       Name          "Desired Vout"
       Show          on
-      Position      [1275, 115]
+      Position      [1390, 120]
       Direction     right
       Flipped       on
       LabelPosition south
       Frame         [-10, -10; 10, 10]
       Parameter {
         Variable      "Value"
-        Value         "5"
+        Value         "12"
         Show          on
       }
       Parameter {
@@ -910,7 +930,7 @@ Plecs {
       Type          VoltageSource
       Name          "V1"
       Show          on
-      Position      [1035, 115]
+      Position      [1150, 120]
       Direction     up
       Flipped       off
       LabelPosition west
@@ -929,7 +949,7 @@ Plecs {
       Type          Subsystem
       Name          "Voltage Offset Generator"
       Show          on
-      Position      [1160, 115]
+      Position      [1275, 120]
       Direction     up
       Flipped       off
       LabelPosition north
@@ -1099,7 +1119,7 @@ Plecs {
       SrcComponent  "Components/Electrical/Electronics/Op-Amp"
       Name          "Op-Amp1"
       Show          on
-      Position      [750, 220]
+      Position      [865, 225]
       Direction     up
       Flipped       off
       LabelPosition north
@@ -1134,7 +1154,7 @@ Plecs {
       Type          Ground
       Name          "Ground5"
       Show          off
-      Position      [750, 250]
+      Position      [865, 255]
       Direction     up
       Flipped       off
       LabelPosition east
@@ -1143,7 +1163,7 @@ Plecs {
       Type          Ammeter
       Name          "Am1"
       Show          on
-      Position      [445, 220]
+      Position      [560, 225]
       Direction     right
       Flipped       off
       LabelPosition north
@@ -1152,7 +1172,7 @@ Plecs {
       Type          Goto
       Name          "Goto"
       Show          off
-      Position      [445, 250]
+      Position      [560, 255]
       Direction     up
       Flipped       on
       LabelPosition east
@@ -1171,7 +1191,7 @@ Plecs {
       Type          Sum
       Name          "Sum2"
       Show          off
-      Position      [525, 385]
+      Position      [640, 390]
       Direction     down
       Flipped       on
       LabelPosition south
@@ -1195,7 +1215,7 @@ Plecs {
       Type          Gain
       Name          "Gain2"
       Show          on
-      Position      [605, 385]
+      Position      [720, 390]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -1219,7 +1239,7 @@ Plecs {
       Type          From
       Name          "From"
       Show          off
-      Position      [675, 385]
+      Position      [790, 390]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -1236,16 +1256,16 @@ Plecs {
     }
     Component {
       Type          Constant
-      Name          "Constant3"
+      Name          "Desired Ioutmax"
       Show          on
-      Position      [950, 485]
+      Position      [1065, 490]
       Direction     right
       Flipped       on
       LabelPosition south
       Frame         [-10, -10; 10, 10]
       Parameter {
         Variable      "Value"
-        Value         "1"
+        Value         "3"
         Show          on
       }
       Parameter {
@@ -1258,7 +1278,7 @@ Plecs {
       Type          Subsystem
       Name          "Current offset generator"
       Show          on
-      Position      [770, 485]
+      Position      [885, 490]
       Direction     up
       Flipped       off
       LabelPosition north
@@ -1412,7 +1432,6 @@ Plecs {
           Type          Signal
           SrcComponent  "Dersired Iout_max"
           SrcTerminal   1
-          Points        [215, 165; 195, 165]
           DstComponent  "Gain3"
           DstTerminal   1
         }
@@ -1420,7 +1439,6 @@ Plecs {
           Type          Signal
           SrcComponent  "Subtract"
           SrcTerminal   1
-          Points        [65, 115; 45, 115]
           DstComponent  "Ioffset"
           DstTerminal   1
         }
@@ -1430,7 +1448,7 @@ Plecs {
       Type          From
       Name          "From1"
       Show          off
-      Position      [1460, 330]
+      Position      [1575, 335]
       Direction     left
       Flipped       on
       LabelPosition north
@@ -1449,7 +1467,7 @@ Plecs {
       Type          Goto
       Name          "Goto1"
       Show          off
-      Position      [210, 545]
+      Position      [325, 550]
       Direction     left
       Flipped       off
       LabelPosition north
@@ -1468,7 +1486,7 @@ Plecs {
       Type          From
       Name          "From2"
       Show          off
-      Position      [1455, 365]
+      Position      [1570, 370]
       Direction     left
       Flipped       on
       LabelPosition north
@@ -1483,32 +1501,92 @@ Plecs {
         Show          off
       }
     }
+    Component {
+      Type          PlecsProbe
+      Name          "Cin current"
+      Show          on
+      Position      [1580, 415]
+      Direction     right
+      Flipped       off
+      LabelPosition south
+      Probe {
+        Component     "C2"
+        Path          ""
+        Signals       {"Capacitor current"}
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "Lparacitic"
+      Show          on
+      Position      [190, 155]
+      Direction     left
+      Flipped       off
+      LabelPosition north
+      Parameter {
+        Variable      "L"
+        Value         "0.1e-6"
+        Show          on
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Capacitor
+      Name          "C2"
+      Show          on
+      Position      [245, 185]
+      Direction     down
+      Flipped       on
+      LabelPosition west
+      Parameter {
+        Variable      "C"
+        Value         "1e-3"
+        Show          on
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
     Connection {
       Type          Wire
-      SrcComponent  "V"
+      SrcComponent  "Am1"
       SrcTerminal   2
-      Points        [140, 220; 275, 220]
+      Points        [515, 225]
       Branch {
-        Points        [400, 220]
+        Points        [390, 225]
         Branch {
-          DstComponent  "Am1"
-          DstTerminal   2
+          Points        [245, 225]
+          Branch {
+            Points        [140, 225]
+            DstComponent  "V"
+            DstTerminal   2
+          }
+          Branch {
+            DstComponent  "C2"
+            DstTerminal   2
+          }
         }
         Branch {
-          DstComponent  "C1"
-          DstTerminal   2
+          DstComponent  "D1"
+          DstTerminal   1
         }
       }
       Branch {
-        DstComponent  "D1"
-        DstTerminal   1
+        DstComponent  "C1"
+        DstTerminal   2
       }
     }
     Connection {
       Type          Wire
       SrcComponent  "Rload"
       SrcTerminal   2
-      Points        [485, 220]
+      Points        [600, 225]
       Branch {
         DstComponent  "Am1"
         DstTerminal   1
@@ -1522,7 +1600,7 @@ Plecs {
       Type          Wire
       SrcComponent  "FET1"
       SrcTerminal   2
-      Points        [275, 150]
+      Points        [390, 155]
       Branch {
         DstComponent  "L1"
         DstTerminal   1
@@ -1534,25 +1612,17 @@ Plecs {
     }
     Connection {
       Type          Wire
-      SrcComponent  "V"
-      SrcTerminal   1
-      Points        [140, 150]
-      DstComponent  "FET1"
-      DstTerminal   1
-    }
-    Connection {
-      Type          Wire
       SrcComponent  "L1"
       SrcTerminal   2
-      Points        [400, 150]
+      Points        [515, 155]
       Branch {
-        Points        [485, 150]
+        Points        [600, 155]
         Branch {
           DstComponent  "Rload"
           DstTerminal   1
         }
         Branch {
-          Points        [600, 150]
+          Points        [715, 155]
           DstComponent  "R1"
           DstTerminal   1
         }
@@ -1566,7 +1636,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Saturation"
       SrcTerminal   2
-      Points        [325, 610; 325, 555]
+      Points        [440, 615; 440, 560]
       DstComponent  "Peak Current\nController"
       DstTerminal   2
     }
@@ -1595,7 +1665,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Gain"
       SrcTerminal   2
-      Points        [425, 660]
+      Points        [540, 665]
       DstComponent  "Sum1"
       DstTerminal   3
     }
@@ -1603,7 +1673,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Sum"
       SrcTerminal   1
-      Points        [555, 610]
+      Points        [670, 615]
       Branch {
         DstComponent  "Gain1"
         DstTerminal   1
@@ -1631,7 +1701,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Diode current"
       SrcTerminal   1
-      Points        [1525, 230; 1525, 130]
+      Points        [1640, 235; 1640, 135]
       DstComponent  "Scope1"
       DstTerminal   4
     }
@@ -1639,7 +1709,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Inductor current"
       SrcTerminal   1
-      Points        [1510, 145; 1510, 110]
+      Points        [1625, 150; 1625, 115]
       DstComponent  "Scope1"
       DstTerminal   2
     }
@@ -1647,7 +1717,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Switch current"
       SrcTerminal   1
-      Points        [1515, 185; 1515, 120]
+      Points        [1630, 190; 1630, 125]
       DstComponent  "Scope1"
       DstTerminal   3
     }
@@ -1655,7 +1725,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Cout current"
       SrcTerminal   1
-      Points        [1535, 275; 1535, 140]
+      Points        [1650, 280; 1650, 145]
       DstComponent  "Scope1"
       DstTerminal   5
     }
@@ -1677,9 +1747,9 @@ Plecs {
       Type          Wire
       SrcComponent  "R3"
       SrcTerminal   2
-      Points        [925, 310]
+      Points        [1040, 315]
       Branch {
-        Points        [925, 240]
+        Points        [1040, 245]
         DstComponent  "Op-Amp"
         DstTerminal   2
       }
@@ -1692,7 +1762,7 @@ Plecs {
       Type          Wire
       SrcComponent  "Ground1"
       SrcTerminal   1
-      Points        [600, 310]
+      Points        [715, 315]
       Branch {
         DstComponent  "R2"
         DstTerminal   2
@@ -1706,7 +1776,7 @@ Plecs {
       Type          Wire
       SrcComponent  "R5"
       SrcTerminal   1
-      Points        [905, 220]
+      Points        [1020, 225]
       Branch {
         DstComponent  "Op-Amp"
         DstTerminal   1
@@ -1727,13 +1797,13 @@ Plecs {
       Type          Wire
       SrcComponent  "R3"
       SrcTerminal   1
-      Points        [1015, 310; 1015, 230]
+      Points        [1130, 315; 1130, 235]
       Branch {
         DstComponent  "Op-Amp"
         DstTerminal   3
       }
       Branch {
-        Points        [1095, 230]
+        Points        [1210, 235]
         DstComponent  "Vm1"
         DstTerminal   1
       }
@@ -1742,7 +1812,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Vm1"
       SrcTerminal   3
-      Points        [1110, 665; 605, 665]
+      Points        [1225, 670; 720, 670]
       DstComponent  "Sum"
       DstTerminal   3
     }
@@ -1764,7 +1834,7 @@ Plecs {
       Type          Wire
       SrcComponent  "R6"
       SrcTerminal   1
-      Points        [905, 90; 1035, 90]
+      Points        [1020, 95; 1150, 95]
       DstComponent  "V1"
       DstTerminal   1
     }
@@ -1779,13 +1849,13 @@ Plecs {
       Type          Wire
       SrcComponent  "Op-Amp1"
       SrcTerminal   3
-      Points        [790, 220]
+      Points        [905, 225]
       Branch {
         DstComponent  "R5"
         DstTerminal   2
       }
       Branch {
-        Points        [790, 275; 700, 275; 700, 230]
+        Points        [905, 280; 815, 280; 815, 235]
         DstComponent  "Op-Amp1"
         DstTerminal   2
       }
@@ -1794,7 +1864,7 @@ Plecs {
       Type          Wire
       SrcComponent  "R2"
       SrcTerminal   1
-      Points        [600, 210]
+      Points        [715, 215]
       Branch {
         DstComponent  "R1"
         DstTerminal   2
@@ -1822,7 +1892,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Sum2"
       SrcTerminal   1
-      Points        [410, 385; 410, 535]
+      Points        [525, 390; 525, 540]
       DstComponent  "Peak Current\nController"
       DstTerminal   1
     }
@@ -1835,7 +1905,7 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Constant3"
+      SrcComponent  "Desired Ioutmax"
       SrcTerminal   1
       DstComponent  "Current offset generator"
       DstTerminal   1
@@ -1851,7 +1921,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Current offset generator"
       SrcTerminal   2
-      Points        [525, 485]
+      Points        [640, 490]
       DstComponent  "Sum2"
       DstTerminal   3
     }
@@ -1859,7 +1929,7 @@ Plecs {
       Type          Signal
       SrcComponent  "From1"
       SrcTerminal   1
-      Points        [1560, 330; 1560, 150]
+      Points        [1675, 335; 1675, 155]
       DstComponent  "Scope1"
       DstTerminal   6
     }
@@ -1867,7 +1937,7 @@ Plecs {
       Type          Signal
       SrcComponent  "Peak Current\nController"
       SrcTerminal   3
-      Points        [235, 545]
+      Points        [350, 550]
       Branch {
         DstComponent  "FET1"
         DstTerminal   3
@@ -1881,9 +1951,39 @@ Plecs {
       Type          Signal
       SrcComponent  "From2"
       SrcTerminal   1
-      Points        [1575, 365; 1575, 160]
+      Points        [1690, 370; 1690, 165]
       DstComponent  "Scope1"
       DstTerminal   7
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Cin current"
+      SrcTerminal   1
+      Points        [1695, 415; 1695, 175]
+      DstComponent  "Scope1"
+      DstTerminal   8
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Lparacitic"
+      SrcTerminal   1
+      Points        [140, 155]
+      DstComponent  "V"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Lparacitic"
+      SrcTerminal   2
+      Points        [245, 155]
+      Branch {
+        DstComponent  "FET1"
+        DstTerminal   1
+      }
+      Branch {
+        DstComponent  "C2"
+        DstTerminal   1
+      }
     }
   }
   Analysis {
@@ -1900,4 +2000,4 @@ Plecs {
     ShowCycles    "10"
   }
 }
-DemoSignature "jmerur+f1d9r0SuBkTFXxXLfNbW+b/Q/FfrjX/6rEPs="
+DemoSignature "frvNj2+bmmFIGTIyt6sECMbPwHuYB5QXqOOugoaxPhQ="
