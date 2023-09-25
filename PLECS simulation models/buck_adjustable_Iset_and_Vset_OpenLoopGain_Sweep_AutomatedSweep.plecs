@@ -1,9 +1,10 @@
 Plecs {
-  Name          "buck_adjustable_Iset_and_Vset_OpenLoopGain_Sweep"
+  Name          "buck_adjustable_Iset_and_Vset_OpenLoopGain_Sweep_AutomatedSwe"
+"ep"
   Version       "4.7"
   CircuitModel  "ContStateSpace"
   StartTime     "0.0"
-  TimeSpan      "0.5"
+  TimeSpan      "0.25"
   Timeout       ""
   Solver        "dopri"
   MaxStep       "1e-6"
@@ -44,12 +45,12 @@ Plecs {
   ExternalModeSettings ""
   AlgebraicLoopMethod "1"
   AlgebraicLoopTolerance "1e-6"
-  ScriptsDialogGeometry "[-2214 1284 1469 721]"
+  ScriptsDialogGeometry "[519 343 933 441]"
   ScriptsDialogSplitterPos "227"
   Schematic {
     Location      [0, 23; 1920, 993]
     ZoomFactor    1.14437
-    SliderPosition [217, 0]
+    SliderPosition [154, 0]
     ShowBrowser   off
     BrowserWidth  100
     Component {
@@ -908,26 +909,26 @@ Plecs {
     }
     Component {
       Type          Scope
-      Name          "Scope1"
+      Name          "mainScope"
       Show          on
       Position      [1785, 150]
       Direction     up
       Flipped       off
       LabelPosition south
-      Location      [-2261, 758; -554, 1734]
-      State         "AAAA/wAAAAD9AAAAAgAAAAEAAARKAAAFqfwCAAAAA/sAAAAQAFoAbwBvA"
-"G0AQQByAGUAYQAAAAAA/////wAAAjsA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
-"///wAAAJcA////+wAAAAwAVAByAGEAYwBlAHMAAAAAAP////8AAACXAP///wAAAAMAAAtAAAACE/w"
-"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAC0AAAABxAP///wAACgEAAAWVAAAA"
+      Location      [0, 27; 1920, 1066]
+      State         "AAAA/wAAAAD9AAAAAgAAAAEAAAI4AAAD9PwCAAAAA/sAAAAQAFoAbwBvA"
+"G0AQQByAGUAYQAAAAAA/////wAAAZwA////+wAAABQAUwBhAHYAZQBkAFYAaQBlAHcAcwAAAAAA//"
+"///wAAAGYA////+wAAAAwAVAByAGEAYwBlAHMBAAAALwAAA/QAAABmAP///wAAAAMAAAeAAAABTfw"
+"BAAAAAfsAAAAUAEQAYQB0AGEAVwBpAGQAZwBlAHQAAAAAAAAAB4AAAABQAP///wAABUQAAAP0AAAA"
 "BAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAOAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAA"
 "AAAAA=="
       SavedViews    "AAAAAgAAAAA="
-      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAB"
-"QAAAJYAAAAIAAAAlgAAAAkAAACWAAAAAgAAAJYAAAADAAAAlgAAAAEAAACWAAAABgAAAJYAAAAHAA"
-"AAlgAAAAQAAACWAAABLwAAAAsBAAABAAAAAAAAAAAAAAAAlv////8AAACBAAAAAAAAAAsAAAD6AAA"
+      HeaderState   "AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAL/gMAAAAJAAAAC"
+"QAAAJYAAAAIAAAAlgAAAAMAAACWAAAAAgAAAJYAAAABAAAAlgAAAAcAAACWAAAABgAAAJYAAAAFAA"
+"AAlgAAAAQAAACWAAAA3QAAAAsBAAABAAAAAAAAAAAAAAAAZP////8AAACBAAAAAAAAAAsAAAC5AAA"
 "AAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAA"
 "AAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA"
-"AA1AAAAAQAAAAAAAAPoAAAAADU="
+"AAkAAAAAQAAAAAAAAPoAAAAACQ="
       PlotPalettes  "AAAAAQAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA"
 "AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 "AAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -2634,7 +2635,7 @@ Plecs {
       Type          Constant
       Name          "Constant2"
       Show          on
-      Position      [1165, 325]
+      Position      [1385, 325]
       Direction     right
       Flipped       on
       LabelPosition south
@@ -2693,7 +2694,7 @@ Plecs {
       }
       Parameter {
         Variable      "v_init"
-        Value         "20"
+        Value         "0"
         Show          off
       }
     }
@@ -2707,7 +2708,7 @@ Plecs {
       LabelPosition south
       Parameter {
         Variable      "Time"
-        Value         "0.25"
+        Value         "0.1"
         Show          off
       }
       Parameter {
@@ -2717,7 +2718,7 @@ Plecs {
       }
       Parameter {
         Variable      "After"
-        Value         "20/3"
+        Value         "Rload"
         Show          off
       }
       Parameter {
@@ -2779,68 +2780,216 @@ Plecs {
       }
     }
     Component {
-      Type          Scope
-      Name          "Scope3"
+      Type          Constant
+      Name          "Desired Vout"
       Show          on
-      Position      [595, 30]
+      Position      [1385, 420]
+      Direction     right
+      Flipped       on
+      LabelPosition south
+      Frame         [-10, -10; 10, 10]
+      Parameter {
+        Variable      "Value"
+        Value         "20"
+        Show          on
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
+      }
+    }
+    Component {
+      Type          Subsystem
+      Name          "Voltage Offset Generator"
+      Show          on
+      Position      [1290, 420]
       Direction     up
       Flipped       off
-      LabelPosition south
-      Location      [0, 0; 0, 0]
-      State         ""
-      SavedViews    ""
-      HeaderState   ""
-      PlotPalettes  ""
-      Axes          "1"
-      TimeRange     "0.0"
-      ScrollingMode "1"
-      SingleTimeAxis "1"
-      Open          "0"
-      Ts            "-1"
-      SampleLimit   "0"
-      XAxisLabel    "Time / s"
-      ShowLegend    "1"
-      Axis {
-        Name          ""
-        AutoScale     1
-        MinValue      0
-        MaxValue      1
-        Signals       {}
-        SignalTypes   [ ]
-        Untangle      0
-        KeepBaseline  off
-        BaselineValue 0
+      LabelPosition north
+      Frame         [-60, -20; 60, 20]
+      SampleTime    "-1"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskDisplayLang "2"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Terminal {
+        Type          Input
+        Position      [60, 0]
+        Direction     right
       }
-      Fourier {
-        SingleXAxis       on
-        AxisLabel         "Frequency / Hz"
-        Scaling           0
-        PhaseDisplay      0
-        ShowFourierLegend off
-        Axis {
-          Name          ""
-          AutoScale     1
-          MinValue      0
-          MaxValue      1
-          Signals       {}
-          Untangle      0
-          KeepBaseline  off
-          BaselineValue 0
+      Terminal {
+        Type          Output
+        Position      [-64, 0]
+        Direction     left
+      }
+      Schematic {
+        Location      [925, 601; 1427, 855]
+        ZoomFactor    1
+        SliderPosition [0, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Gain
+          Name          "Gain3"
+          Show          on
+          Position      [145, 145]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "K"
+            Value         "0.125"
+            Show          off
+          }
+          Parameter {
+            Variable      "Multiplication"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Sum
+          Name          "Subtract"
+          Show          off
+          Position      [220, 140]
+          Direction     up
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "IconShape"
+            Value         "1"
+            Show          off
+          }
+          Parameter {
+            Variable      "Inputs"
+            Value         "+-"
+            Show          off
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Constant
+          Name          "Constant2"
+          Show          on
+          Position      [150, 70]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Frame         [-10, -10; 10, 10]
+          Parameter {
+            Variable      "Value"
+            Value         "2.5"
+            Show          on
+          }
+          Parameter {
+            Variable      "DataType"
+            Value         "10"
+            Show          off
+          }
+        }
+        Component {
+          Type          Input
+          Name          "Vo_desired"
+          Show          on
+          Position      [75, 145]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Output
+          Name          "Voffset"
+          Show          on
+          Position      [285, 140]
+          Direction     right
+          Flipped       off
+          LabelPosition south
+          Parameter {
+            Variable      "Index"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Gain3"
+          SrcTerminal   2
+          DstComponent  "Subtract"
+          DstTerminal   3
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Constant2"
+          SrcTerminal   1
+          Points        [185, 70; 185, 135]
+          DstComponent  "Subtract"
+          DstTerminal   2
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Vo_desired"
+          SrcTerminal   1
+          DstComponent  "Gain3"
+          DstTerminal   1
+        }
+        Connection {
+          Type          Signal
+          SrcComponent  "Subtract"
+          SrcTerminal   1
+          DstComponent  "Voffset"
+          DstTerminal   1
         }
       }
     }
     Component {
-      Type          PlecsProbe
-      Name          "Probe"
-      Show          on
-      Position      [515, 30]
-      Direction     right
-      Flipped       off
+      Type          Sum
+      Name          "Sum2"
+      Show          off
+      Position      [1170, 330]
+      Direction     down
+      Flipped       on
       LabelPosition south
-      Probe {
-        Component     "D1"
-        Path          ""
-        Signals       {"Diode voltage"}
+      Parameter {
+        Variable      "IconShape"
+        Value         "1"
+        Show          off
+      }
+      Parameter {
+        Variable      "Inputs"
+        Value         "++"
+        Show          off
+      }
+      Parameter {
+        Variable      "DataType"
+        Value         "10"
+        Show          off
       }
     }
     Connection {
@@ -2894,7 +3043,7 @@ Plecs {
       SrcComponent  "Diode current"
       SrcTerminal   1
       Points        [1640, 235; 1640, 135]
-      DstComponent  "Scope1"
+      DstComponent  "mainScope"
       DstTerminal   4
     }
     Connection {
@@ -2902,7 +3051,7 @@ Plecs {
       SrcComponent  "Inductor current"
       SrcTerminal   1
       Points        [1625, 150; 1625, 115]
-      DstComponent  "Scope1"
+      DstComponent  "mainScope"
       DstTerminal   2
     }
     Connection {
@@ -2910,7 +3059,7 @@ Plecs {
       SrcComponent  "Switch current"
       SrcTerminal   1
       Points        [1630, 190; 1630, 125]
-      DstComponent  "Scope1"
+      DstComponent  "mainScope"
       DstTerminal   3
     }
     Connection {
@@ -2918,14 +3067,14 @@ Plecs {
       SrcComponent  "Cout current"
       SrcTerminal   1
       Points        [1650, 280; 1650, 145]
-      DstComponent  "Scope1"
+      DstComponent  "mainScope"
       DstTerminal   5
     }
     Connection {
       Type          Signal
       SrcComponent  "Vout"
       SrcTerminal   1
-      DstComponent  "Scope1"
+      DstComponent  "mainScope"
       DstTerminal   1
     }
     Connection {
@@ -2933,7 +3082,7 @@ Plecs {
       SrcComponent  "From1"
       SrcTerminal   1
       Points        [1675, 335; 1675, 155]
-      DstComponent  "Scope1"
+      DstComponent  "mainScope"
       DstTerminal   6
     }
     Connection {
@@ -2941,7 +3090,7 @@ Plecs {
       SrcComponent  "From2"
       SrcTerminal   1
       Points        [1690, 370; 1690, 165]
-      DstComponent  "Scope1"
+      DstComponent  "mainScope"
       DstTerminal   7
     }
     Connection {
@@ -2949,7 +3098,7 @@ Plecs {
       SrcComponent  "Cin current"
       SrcTerminal   1
       Points        [1695, 415; 1695, 175]
-      DstComponent  "Scope1"
+      DstComponent  "mainScope"
       DstTerminal   8
     }
     Connection {
@@ -2980,7 +3129,7 @@ Plecs {
       SrcComponent  "Cin voltage"
       SrcTerminal   1
       Points        [1705, 465; 1705, 185]
-      DstComponent  "Scope1"
+      DstComponent  "mainScope"
       DstTerminal   9
     }
     Connection {
@@ -2988,7 +3137,7 @@ Plecs {
       SrcComponent  "Supply current"
       SrcTerminal   1
       Points        [1715, 515; 1715, 195]
-      DstComponent  "Scope1"
+      DstComponent  "mainScope"
       DstTerminal   10
     }
     Connection {
@@ -3193,14 +3342,6 @@ Plecs {
       }
     }
     Connection {
-      Type          Signal
-      SrcComponent  "Constant2"
-      SrcTerminal   1
-      Points        [1145, 325; 1145, 260]
-      DstComponent  "V1"
-      DstTerminal   3
-    }
-    Connection {
       Type          Wire
       SrcComponent  "Cout"
       SrcTerminal   1
@@ -3306,10 +3447,33 @@ Plecs {
     }
     Connection {
       Type          Signal
-      SrcComponent  "Probe"
+      SrcComponent  "Desired Vout"
       SrcTerminal   1
-      DstComponent  "Scope3"
+      DstComponent  "Voltage Offset Generator"
       DstTerminal   1
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Constant2"
+      SrcTerminal   1
+      DstComponent  "Sum2"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Sum2"
+      SrcTerminal   1
+      Points        [1145, 330; 1145, 260]
+      DstComponent  "V1"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Signal
+      SrcComponent  "Voltage Offset Generator"
+      SrcTerminal   2
+      Points        [1215, 420; 1215, 335]
+      DstComponent  "Sum2"
+      DstTerminal   3
     }
     Annotation {
       Name          "<html><body>\n<p>Cout = 283uF (220uF + 10uF*9*0.7)</p>\n<"
@@ -3396,8 +3560,14 @@ Plecs {
     InitCycles    "14000"
   }
   Script {
-    Name          "Script"
-    Script        ""
+    Name          "Test"
+    Script        "modelPath = plecs('get','','CurrentCircuit');\nmainScope = "
+"[modelPath '/mainScope'];\n\nplecs('scope',mainScope,'ClearTraces');\n\nRload"
+"Vals = [20/0.1, 20/1 , 20/3];\n\nS_Rload = struct('Rload',20/0.1);\nS_ModelVa"
+"rs = struct('ModelVars',S_Rload);\n\nfor currentResistance = RloadVals\nS_Mod"
+"elVars.ModelVars.Rload = currentResistance;\nplecs('simulate',S_ModelVars);\n"
+"plecs('scope',mainScope,'HoldTrace',['R = ' mat2str(currentResistance)]);\nen"
+"d"
   }
 }
-DemoSignature "B38DbNIh5FhmtwzMwz5ZPFbZ+ZiHccDJaY1gTSgdo4Q="
+DemoSignature "P29ZywpV6HSy5c+nYQq3ltribn0ATUW610SpOrumpN8="
