@@ -1,0 +1,7 @@
+Record=TopLevelDocument|FileName=Buck_60W20V_Overview.SchDoc|SheetNumber=1
+Record=SheetSymbol|SourceDocument=Buck_60W20V_Overview.SchDoc|Designator=U_Buck_60W20V_Control_Section|SchDesignator=U_Buck_60W20V_Control_Section|FileName=Buck_60W20V_Control_Section.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=Buck_60W20V_Control_Section.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Buck_60W20V_Overview.SchDoc|Designator=U_Buck_60W20V_MCU_AuxPSU|SchDesignator=U_Buck_60W20V_MCU_AuxPSU|FileName=Buck_60W20V_MCU_AuxPSU.SchDoc|SheetNumber=4|SymbolType=Normal|RawFileName=Buck_60W20V_MCU_AuxPSU.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Buck_60W20V_Overview.SchDoc|Designator=U_Buck_60W20V_Power_Section|SchDesignator=U_Buck_60W20V_Power_Section|FileName=Buck_60W20V_Power_Section.SchDoc|SheetNumber=2|SymbolType=Normal|RawFileName=Buck_60W20V_Power_Section.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=NoMainPathDocument|SourceDocument=Buck_60W20V_Overview.SchDoc|FileName=Feedback_Controller_Buck.SchDoc|SheetNumber=6
+Record=NoMainPathDocument|SourceDocument=Buck_60W20V_Overview.SchDoc|FileName=Main_Buck.SchDoc|SheetNumber=5
+Record=NoMainPathDocument|SourceDocument=Buck_60W20V_Overview.SchDoc|FileName=MCU_buck.SchDoc|SheetNumber=7
