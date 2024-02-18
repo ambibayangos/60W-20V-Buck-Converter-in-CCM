@@ -1,0 +1,44 @@
+Removed Pin From Net: NetName=switch_node Pin=L200-1
+Removed Pin From Net: NetName=switch_node Pin=L200-1
+Removed Member From Class: ClassName=U_Main_Buck Member=L200
+Added Component: Designator=L?(IND_74437429203151)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Irated"; Value = "8.4A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Isat"; Value = "7.8A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manifacturer"; Value = "Wurth Electronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SMD_W25mm_L28mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "74437429203151"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "150U"; VariantName = "[No Variations]"
+Added Component: Designator=R204(RES_0603)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "Datasheets\Resistors\RT0603CRE07100RL_Yageo.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Characteristics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manifacturer"; Value = "YAGEO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "RT0603CRE07100RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100R"; VariantName = "[No Variations]"
+Added Component: Designator=R206(RES_0603)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "Datasheets\Resistors\RT0603CRE07100RL_Yageo.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Characteristics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manifacturer"; Value = "YAGEO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "RT0603CRE07100RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100R"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=switch_node Pin=L?-1
+Added Pin To Net: NetName=LOAD_P Pin=L?-2
+Added Pin To Net: NetName=LOAD_N Pin=R204-1
+Added Pin To Net: NetName=shunt_fil_P Pin=R204-2
+Added Pin To Net: NetName=GND Pin=R206-1
+Added Pin To Net: NetName=shunt_fil_N Pin=R206-2
+Add Net: Net with name "switch_node" already exists
+Add Net: Net with name "Vfb_offseted" already exists
+Add Net: Net with name "Vifb_multiplied_offseted" already exists
+Added Member To Class: ClassName=U_Main_Buck Member=Component L? INDUCTOR
+Added Member To Class: ClassName=U_Main_Buck Member=Component R204 RESISTOR
+Added Member To Class: ClassName=U_Main_Buck Member=Component R206 RESISTOR

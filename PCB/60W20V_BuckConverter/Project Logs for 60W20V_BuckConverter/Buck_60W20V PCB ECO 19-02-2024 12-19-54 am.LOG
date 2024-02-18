@@ -1,0 +1,55 @@
+Removed Pin From Net: NetName=GND Pin=C201-1
+Removed Pin From Net: NetName=24V Pin=C201-2
+Removed Pin From Net: NetName=GND Pin=C202-1
+Removed Pin From Net: NetName=24V Pin=C202-2
+Removed Pin From Net: NetName=GND Pin=C203-1
+Removed Pin From Net: NetName=24V Pin=C203-2
+Removed Pin From Net: NetName=GND Pin=C204-1
+Removed Pin From Net: NetName=24V Pin=C204-2
+Removed Pin From Net: NetName=GND Pin=C205-1
+Removed Pin From Net: NetName=24V Pin=C205-2
+Removed Pin From Net: NetName=GND Pin=C206-1
+Removed Pin From Net: NetName=24V Pin=C206-2
+Removed Pin From Net: NetName=GND Pin=C207-1
+Removed Pin From Net: NetName=24V Pin=C207-2
+Removed Pin From Net: NetName=GND Pin=C208-1
+Removed Pin From Net: NetName=24V Pin=C208-2
+Removed Pin From Net: NetName=GND Pin=C209-1
+Removed Pin From Net: NetName=24V Pin=C209-2
+Removed Pin From Net: NetName=24V Pin=C210-1
+Removed Pin From Net: NetName=GND Pin=C210-2
+Removed Pin From Net: NetName=24V Pin=C212-1
+Removed Pin From Net: NetName=GND Pin=C212-2
+Removed Pin From Net: NetName=24V Pin=C214-1
+Removed Pin From Net: NetName=GND Pin=C214-2
+Removed Pin From Net: NetName=24V Pin=C215-1
+Removed Pin From Net: NetName=GND Pin=C215-2
+Removed Pin From Net: NetName=24V Pin=C216-1
+Removed Pin From Net: NetName=GND Pin=C216-2
+Removed Pin From Net: NetName=24V Pin=C217-1
+Removed Pin From Net: NetName=GND Pin=C217-2
+Removed Member From Class: ClassName=U_Main_Buck Member=C201
+Removed Member From Class: ClassName=U_Main_Buck Member=C202
+Removed Member From Class: ClassName=U_Main_Buck Member=C203
+Removed Member From Class: ClassName=U_Main_Buck Member=C204
+Removed Member From Class: ClassName=U_Main_Buck Member=C205
+Removed Member From Class: ClassName=U_Main_Buck Member=C206
+Removed Member From Class: ClassName=U_Main_Buck Member=C207
+Removed Member From Class: ClassName=U_Main_Buck Member=C208
+Removed Member From Class: ClassName=U_Main_Buck Member=C209
+Removed Member From Class: ClassName=U_Main_Buck Member=C210
+Removed Member From Class: ClassName=U_Main_Buck Member=C212
+Removed Member From Class: ClassName=U_Main_Buck Member=C214
+Removed Member From Class: ClassName=U_Main_Buck Member=C215
+Removed Member From Class: ClassName=U_Main_Buck Member=C216
+Removed Member From Class: ClassName=U_Main_Buck Member=C217
+Change Component Footprint: Designator=C200 Old Footprint=CAP_1210 New Footprint=CAP_0402
+Change component parameters: Designator = "C200" ("C200"); Footprint = "CAP_1210"; UniqueID = "\SYXKMHUW\DADNAVWR" ("\SYXKMHUW\DADNAVWR")
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.lcsc.com/lcsc/1912111437_Taiyo-Yuden-UMF105B7102KVHF_C386104.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Characteristics"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "Datasheets\Capacitors\UMF105B7102KVHF_TaiyoYuden.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manifacturer"; Value = "Taiyo Yuden"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "0402"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Number"; Value = "UMF105B7102KVHF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "1N"; VariantName = "[No Variations]"

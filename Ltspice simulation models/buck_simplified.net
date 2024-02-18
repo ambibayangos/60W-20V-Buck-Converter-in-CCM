@@ -1,0 +1,20 @@
+* C:\Users\artur\OneDrive\Desktop\60W-20V-Buck-Converter-in-CCM\Ltspice simulation models\buck_simplified.asc
+V1 N001 0 24
+D1 0 N002 MBR745
+M1 vincap N004 N002 N002 BSC060N10NS3
+L1 N002 N003 150µ
+C1 N003 0 470µ
+R1 N003 0 3
+V2 N004 N002 PULSE(0 12 0 100n 100n {D/freq} {1/freq})
+C2 vincap 0 10µ
+L2 N001 vincap 100µ
+B1 cin_ac 0 V= V(vincap) - 24
+.model D D
+.lib C:\Users\artur\AppData\Local\LTspice\lib\cmp\standard.dio
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\artur\AppData\Local\LTspice\lib\cmp\standard.mos
+.param freq=100k D=0.83
+.tran 0 {100m + 5/freq} 100m 100n
+.backanno
+.end

@@ -1,0 +1,28 @@
+Added Component: Designator=R204(RES_0603)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "Datasheets\Resistors\RT0603CRE07100RL_Yageo.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Characteristics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manifacturer"; Value = "YAGEO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "RT0603CRE07100RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100R"; VariantName = "[No Variations]"
+Added Component: Designator=R206(RES_0603)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "Datasheets\Resistors\RT0603CRE07100RL_Yageo.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Characteristics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manifacturer"; Value = "YAGEO"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "RT0603CRE07100RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100R"; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin L200-2
+Added Pin To Net: NetName=LOAD_N Pin=R204-1
+Added Pin To Net: NetName=shunt_fil_P Pin=R204-2
+Added Pin To Net: NetName=GND Pin=R206-1
+Added Pin To Net: NetName=shunt_fil_N Pin=R206-2
+Add Net: Net with name "switch_node" already exists
+Add Net: Net with name "Vfb_offseted" already exists
+Add Net: Net with name "Vifb_multiplied_offseted" already exists
+Added Member To Class: ClassName=U_Main_Buck Member=Component R204 RESISTOR
+Added Member To Class: ClassName=U_Main_Buck Member=Component R206 RESISTOR

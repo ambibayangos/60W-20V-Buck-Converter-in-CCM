@@ -1,0 +1,53 @@
+Removed Pin From Net: NetName=LCD_EN Pin=HDR401-7
+Removed Pin From Net: NetName=LCD_RS Pin=HDR401-8
+Removed Pin From Net: NetName=lcd_buttons_adc Pin=HDR402-1
+Removed Pin From Net: NetName=LCD_D7 Pin=HDR403-1
+Removed Pin From Net: NetName=LCD_D6 Pin=HDR403-2
+Removed Pin From Net: NetName=LCD_D5 Pin=HDR403-3
+Removed Pin From Net: NetName=LCD_D4 Pin=HDR403-4
+Removed Member From Class: ClassName=U_MCU_buck Member=HDR400
+Removed Member From Class: ClassName=U_MCU_buck Member=HDR401
+Removed Member From Class: ClassName=U_MCU_buck Member=HDR402
+Removed Member From Class: ClassName=U_MCU_buck Member=HDR403
+Change Component Designator: OldDesignator=L? NewDesignator=L200
+Added Component: Designator=C415(CAP_0402)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.lcsc.com/lcsc/2211282030_Taiyo-Yuden-UMK105B7104KV-FR_C2167491.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Characteristics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "Datasheets\Capacitors\UMK105B7104KV-FR_TaiyoYuden.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manifacturer"; Value = "Taiyo Yuden"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0402"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "UMK105B7104KV-FR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "100N"; VariantName = "[No Variations]"
+Added Component: Designator=C416(CAP_0603)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.lcsc.com/lcsc/1912111437_Taiyo-Yuden-TMK107AB7105KAHT_C386079.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Characteristics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "Datasheets\Capacitors\TMK107AB7105KAHT_TaiyoYuden.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manifacturer"; Value = "Taiyo Yuden"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "TMK107AB7105KAHT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "1U"; VariantName = "[No Variations]"
+Added Component: Designator=MODULE400(LCD_MODULE_16X2)
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "NA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Number"; Value = "LCD_16X2_Arduino_Shield"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "LCD 16X2"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C415-1
+Added Pin To Net: NetName=5V Pin=C415-2
+Added Pin To Net: NetName=GND Pin=C416-1
+Added Pin To Net: NetName=5V Pin=C416-2
+Added Pin To Net: NetName=5V Pin=MODULE400-5
+Added Pin To Net: NetName=GND Pin=MODULE400-6
+Added Pin To Net: NetName=lcd_buttons_adc Pin=MODULE400-7
+Added Pin To Net: NetName=LCD_D4 Pin=MODULE400-17
+Added Pin To Net: NetName=LCD_D5 Pin=MODULE400-18
+Added Pin To Net: NetName=LCD_D6 Pin=MODULE400-19
+Added Pin To Net: NetName=LCD_D7 Pin=MODULE400-20
+Added Pin To Net: NetName=LCD_RS Pin=MODULE400-21
+Added Pin To Net: NetName=LCD_EN Pin=MODULE400-22
+Added Member To Class: ClassName=U_MCU_buck Member=Component C415 CAPACITOR
+Added Member To Class: ClassName=U_MCU_buck Member=Component C416 CAPACITOR
+Added Member To Class: ClassName=U_MCU_buck Member=Component MODULE400 LCD_MODULE_16X2
