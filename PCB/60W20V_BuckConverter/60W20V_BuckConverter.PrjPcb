@@ -236,7 +236,83 @@ GenerateClassCluster=0
 DocumentUniqueId=XKRHMCGF
 
 [GeneratedDocument1]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\BOM_AND_PICKNPLACE\Bill of Materials-60W20V_BuckConverter.xlsx
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V-RoundHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V-SlotHoles.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.GKO
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.GM20
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.REP
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\Gerber\Buck_60W20V.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument19]
 DocumentPath=Project Outputs for 60W20V_BuckConverter\Design Rule Check - Buck_60W20V.html
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=Project Outputs for 60W20V_BuckConverter\BOM_AND_PICKNPLACE\Pick Place for Buck_60W20V.csv
 DItemRevisionGUID=
 
 [Configuration1]

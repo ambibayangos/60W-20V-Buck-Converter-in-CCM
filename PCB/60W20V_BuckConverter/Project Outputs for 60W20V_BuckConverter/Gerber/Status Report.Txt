@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [Buck_60W20V.pcbdoc]
+   Generated File[Buck_60W20V-RoundHoles.TXT]
+   Generated File[Buck_60W20V-SlotHoles.TXT]
+   Generated File[Buck_60W20V.LDP]
+   Generated File[Buck_60W20V.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 11:18:06 pm On 25/02/2024
