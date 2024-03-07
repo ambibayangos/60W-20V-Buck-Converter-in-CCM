@@ -43,6 +43,7 @@ CrossRefPorts=3
 CrossRefCrossSheets=1
 CrossRefSheetEntries=0
 CrossRefFollowFromMainSettings=1
+CurrentVariant=DNP
 
 [Preferences]
 PrefsVaultGUID=
@@ -234,6 +235,15 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XKRHMCGF
+
+[ProjectVariant1]
+UniqueID=E9BA81A4-4CC8-4802-9C48-0C2537C1F17F
+Description=DNP
+AllowFabrication=0
+ParameterCount=0
+VariationCount=1
+Variation1=Designator=R314|UniqueId=\IXZKRPGQ\LTKOKRVX|Kind=1|AlternatePart= 
+ParamVariationCount=0
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for 60W20V_BuckConverter\BOM_AND_PICKNPLACE\Bill of Materials-60W20V_BuckConverter.xlsx

@@ -1,5 +1,0 @@
-DRC Rules Export File for PCB: C:\Users\artur\OneDrive\Desktop\60W-20V-Buck-Converter-in-CCM\PCB\60W20V_BuckConverter\Buck_60W20V.pcbdoc
-RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
-RuleKind=Width|RuleName=Width|Scope=Board|Minimum=8.00
-RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=7.87
-RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
